@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+
+<body>
+  <!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+  <script>
+    "use strict";
+
+    /**
+     * Складывает числа.
+     * @param {number} a - первое число.
+     * @param {number} b - второе число.
+     * @return {number} сумма a и b.
+     */
+    function sumNumber(a, b) {
+      return a + b;
+    }
+
+    /**
+     * Вычитает числа.
+     * @param {number} a - первое число.
+     * @param {number} b - второе число.
+     * @return {number} сумма a и b.
+     */
+    function diffNumber(a, b) {
+      if (a > b) {
+        return a - b;
+      } else if (a < b) {
+        return b - a;
+      }
+    }
+
+    /**
+     * Умножаем числа.
+     * @param {number} a - первое число.
+     * @param {number} b - второе число.
+     * @return {number} умножение a и b.
+     */
+    function multiplyNumber(a, b) {
+      return a * b;
+    }
+
+    /**
+     * Деление.
+     * @param {number} a - первое число.
+     * @param {number} b - второе число.
+     * @return {number} деление a и b.
+     */
+    function divideNumber(a, b) {
+      if (a > b) {
+        return a / b;
+      } else if (a < b) {
+        return b / a;
+      }
+    }
+
+    /**
+     * должна вернуть результат операции, который был передан в параметр operation для двух первых аргументов (arg1 и arg2).
+     * @arg1 {number} a - первое число.
+     * @arg2 {number} b - второе число.
+     * @operation {"+", "-", "*", "/"} b - строка, которая содержит один символ из: "+", "-", "*", "/".
+     * @return {number} деление a и b.
+     */
+
+    console.log(mathOperation(20, 20, '+')); //40
+    console.log(mathOperation(30, 20, '-')); //10
+    console.log(mathOperation(5, 6, '*')); //30
+    console.log(mathOperation(40, 2, '/')); //20
+
+    function mathOperation(arg1, arg2, operation) {
+
+      if (operation == '+') {
+        return sumNumber(arg1, arg2);
+      } else if (operation == '-') {
+        return diffNumber(arg1, arg2)
+      } else if (operation == '*') {
+        return multiplyNumber(arg1, arg2)
+      } else if (operation == '/') {
+        return divideNumber(arg1, arg2)
+      }
+    }
+  </script>
+</body>
+
+</html>
