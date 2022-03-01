@@ -30,9 +30,11 @@ console.log(declinationOfNumber(5, "стул", "стула", "стульев"));
     function declinationOfNumber(count, one, two, five) {
       if (count === 1) {
         return one;
-      } else if (count >= 2 && count <= 4) {
+      }
+      if (count >= 2 && count <= 4) {
         return two;
-      } else if (count > 4) {
+      }
+      if (count > 4) {
         return five;
       }
     }
