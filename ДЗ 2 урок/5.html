@@ -53,7 +53,8 @@ Infinity делать не нужно, однако, в случае если б
     function diffNumber(a, b) {
       if (a > b) {
         return a - b;
-      } else if (a < b) {
+      }
+      if (a < b) {
         return b - a;
       }
     }
@@ -77,16 +78,17 @@ Infinity делать не нужно, однако, в случае если б
     function divideNumber(a, b) {
       if (a > b) {
         return a / b;
-      } else if (a < b) {
+      }
+      if (a < b) {
         return b / a;
       }
     }
 
     /**
      * должна вернуть результат операции, который был передан в параметр operation для двух первых аргументов (arg1 и arg2).
-     * @arg1 {number} a - первое число.
-     * @arg2 {number} b - второе число.
-     * @operation {"+", "-", "*", "/"} b - строка, которая содержит один символ из: "+", "-", "*", "/".
+     * @arg1 {number} arg1 - первое число.
+     * @arg2 {number} arg2 - второе число.
+     * @operation {string} operation - строка, которая содержит один символ из: "+", "-", "*", "/".
      * @return {number} деление a и b.
      */
 
@@ -99,11 +101,14 @@ Infinity делать не нужно, однако, в случае если б
 
       if (operation == '+') {
         return sumNumber(arg1, arg2);
-      } else if (operation == '-') {
+      }
+      if (operation == '-') {
         return diffNumber(arg1, arg2)
-      } else if (operation == '*') {
+      }
+      if (operation == '*') {
         return multiplyNumber(arg1, arg2)
-      } else if (operation == '/') {
+      }
+      if (operation == '/') {
         return divideNumber(arg1, arg2)
       }
     }
